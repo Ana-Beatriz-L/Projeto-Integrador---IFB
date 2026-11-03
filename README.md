@@ -6,13 +6,13 @@ O banco tem duas tabelas, que seguem a estrutura do `seed.js` original: `station
 
 ### MER (modelo conceitual)
 
-![MER](docs/mer.png)
+![MER](docs/MER.png)
 
 Uma estação **possui** várias observações, e cada observação pertence a exatamente uma estação (relacionamento 1:N).
 
 ### DER (modelo lógico)
 
-![DER](docs/der.png)
+![DER](docs/DER.png)
 
 **stations**
 
