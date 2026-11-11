@@ -3,6 +3,7 @@ from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from .models import Station
 from .serializers import (
     DISCLAIMER,  # noqa: F401
     ErrorResponseSerializer,
@@ -21,8 +22,15 @@ class StationListView(APIView):
         responses={200: StationListResponseSerializer},
     )
     def get(self, request):
-        # TODO: services.list_stations() -> StationSerializer -> contrato 3.1
-        raise NotImplementedError
+        stations = Station.objects.all()
+        data = {
+            "simulated": True,
+            "disclaimer": DISCLAIMER,
+            "count": stations.count(),
+            "results": stations,
+        }
+        serializer = StationListResponseSerializer(data)
+        return Response(serializer.data)
 
 
 class StationSummaryView(APIView):
@@ -57,6 +65,4 @@ class StationSeriesView(APIView):
     )
     def get(self, request, station_id):
         # TODO: contrato 3.3. Ordem: estacao (404) -> metric/hours (400).
-        # Atencao: no JSON final os campos "from" e "to" (strings ISO UTC ou null)
-        # sao montados no dict da resposta, nao no serializer.
         raise NotImplementedError
