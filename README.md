@@ -57,12 +57,12 @@ Os dados são gerados em duas etapas:
 Siga os passos abaixo para configurar o ambiente e rodar a API na sua máquina:
 
 ### 1. Criar e Ativar o Ambiente Virtual (`venv`)
-> [!NOTE]
-> Certifique-se de estar com o terminal PowerShell aberto na raiz do projeto clonado.
+> **Atenção:** Certifique-se de estar com o terminal PowerShell aberto na raiz do projeto clonado.
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate
+
 2. Instalar as Dependências
 Com o ambiente virtual ativado (venv), instale os pacotes necessários:
 
@@ -80,6 +80,8 @@ Inicie o servidor de desenvolvimento do Django:
 
 python manage.py runserver
 
+O projeto estará acessível em: http://127.0.0.1:8000/
+
 📚 Documentação da API
 Você pode testar e consultar os endpoints da API através da documentação interativa gerada pelo Swagger:
 
@@ -95,4 +97,5 @@ Você pode testar e consultar os endpoints da API através da documentação int
 
 
 
-Todos os dados são simulados e não representam rios reais.
+---
+
