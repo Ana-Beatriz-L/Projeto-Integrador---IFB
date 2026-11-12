@@ -82,20 +82,18 @@ python manage.py runserver
 
 O projeto estará acessível em: http://127.0.0.1:8000/
 
-📚 Documentação da API
+---
+
+## 📚 Documentação da API
+
 Você pode testar e consultar os endpoints da API através da documentação interativa gerada pelo Swagger:
 
-🟢 Swagger UI (Interativo): http://127.0.0.1:8000/api/docs
+* 🟢 **Swagger UI (Interativo):** `http://127.0.0.1:8000/api/docs`
 
-🔵 Principais Endpoints (GET):
-
-/api/stations — Lista todas as estações.
-
-/api/stations/{id}/summary — Exibe o resumo estatístico.
-
-/api/stations/{id}/series — Exibe a série temporal de medições.
-
-
+### 🔵 Principais Endpoints (`GET`)
+* `/api/stations` — Lista todas as estações.
+* `/api/stations/{id}/summary` — Exibe o resumo estatístico.
+* `/api/stations/{id}/series` — Exibe a série temporal de medições.
 
 ---
 
