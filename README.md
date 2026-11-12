@@ -75,9 +75,12 @@ python manage.py migrate
 python scripts/generate_seed.py
 python manage.py import_observations
 
-Como Rodar o Servidor Local
-Inicie o servidor de desenvolvimento do Django:
+---
 
+## ▶️ Como Rodar o Servidor Local
+
+Inicie o servidor de desenvolvimento do Django:
+```powershell
 python manage.py runserver
 
 O projeto estará acessível em: http://127.0.0.1:8000/
