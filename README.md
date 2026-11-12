@@ -50,4 +50,49 @@ Os dados são gerados em duas etapas:
 1. `python scripts/generate_seed.py` gera `data/stations.csv` (3 estações) e `data/observations.csv` (438 leituras: 3 estações × 2 métricas × 73 horários).
 2. `python manage.py import_observations` lê os CSVs e grava no banco. Pode ser executado várias vezes sem duplicar registros.
 
+---
+
+## 🚀 Como Executar o Projeto
+
+Siga os passos abaixo para configurar o ambiente e rodar a API na sua máquina:
+
+### 1. Criar e Ativar o Ambiente Virtual (`venv`)
+> [!NOTE]
+> Certifique-se de estar com o terminal PowerShell aberto na raiz do projeto clonado.
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate
+2. Instalar as Dependências
+Com o ambiente virtual ativado (venv), instale os pacotes necessários:
+
+pip install -r requirements.txt
+
+3. Configurar o Banco de Dados e Popular (Seed)
+Execute as migrações e importe os dados sintéticos do arquivo CSV:
+
+python manage.py migrate
+python scripts/generate_seed.py
+python manage.py import_observations
+
+Como Rodar o Servidor Local
+Inicie o servidor de desenvolvimento do Django:
+
+python manage.py runserver
+
+📚 Documentação da API
+Você pode testar e consultar os endpoints da API através da documentação interativa gerada pelo Swagger:
+
+🟢 Swagger UI (Interativo): http://127.0.0.1:8000/api/docs
+
+🔵 Principais Endpoints (GET):
+
+/api/stations — Lista todas as estações.
+
+/api/stations/{id}/summary — Exibe o resumo estatístico.
+
+/api/stations/{id}/series — Exibe a série temporal de medições.
+
+
+
 Todos os dados são simulados e não representam rios reais.
