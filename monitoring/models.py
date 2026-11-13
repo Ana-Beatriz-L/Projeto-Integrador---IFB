@@ -1,4 +1,4 @@
-"""Modelos (Pessoa 1). Espelham as tabelas do seed.js: stations e observations."""
+
 from django.db import models
 
 
