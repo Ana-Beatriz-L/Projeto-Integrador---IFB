@@ -3,6 +3,7 @@ from datetime import timezone
 from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .exceptions import json_not_found
 
 from . import services
 from .serializers import (
@@ -129,3 +130,5 @@ class StationSeriesView(APIView):
                 "data": points_data,
             }
         )
+def api_not_found(request, *args, **kwargs):
+        return json_not_found(request)
