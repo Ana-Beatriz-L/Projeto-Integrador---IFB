@@ -1,8 +1,3 @@
-"""Regras de negocio e consultas (Pessoa 2).
-
-As views chamam estas funcoes; elas levantam os erros de monitoring/exceptions.py.
-Use o ORM do Django (consultas parametrizadas) e siga docs/api-contract.md.
-"""
 from datetime import timedelta
 
 from .exceptions import InvalidHours, InvalidMetric, StationNotFound

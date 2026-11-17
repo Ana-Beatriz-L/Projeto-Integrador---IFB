@@ -1,7 +1,3 @@
-"""Serializers (Pessoa 2) e descricao das respostas para o Swagger (Pessoa 3).
-
-Os formatos seguem docs/api-contract.md.
-"""
 from rest_framework import serializers
 
 from .models import Station
