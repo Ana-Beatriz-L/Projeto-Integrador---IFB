@@ -191,6 +191,5 @@ Os valores vêm das mesmas fórmulas do `seed.js` (seno para o nível, resto de 
 
 Ficam fora do escopo: previsão por IA, alertas de risco, sensores reais, autenticação e deploy.
 - [Contrato completo da API](docs/api-contract.md)
-- [Guia rápido para apresentação](data/GUIA_APRESENTAÇÃO.md)
 - [Diagrama de entidade-relacionamento](docs/DER.png)
 - [Modelo entidade-relacionamento](docs/MER.png)
