@@ -1,7 +1,3 @@
-"""Erros no formato do contrato (docs/api-contract.md, secao 4).
-
-Todo erro sai como: {"simulated": true, "error": "<codigo>", "message": "<texto>"}
-"""
 from django.http import JsonResponse
 from rest_framework import status
 from rest_framework.exceptions import APIException, MethodNotAllowed, NotFound
@@ -54,8 +50,7 @@ def api_exception_handler(exc, context):
             ),
             status=405,
         )
-    # Qualquer outra coisa (inclusive bugs): 500 no formato do contrato.
-    # TODO (Pessoa 3): decidir se vale logar o erro original aqui.
+   
     return Response(
         error_body("internal_error", "Erro interno do servidor."), status=500
     )
