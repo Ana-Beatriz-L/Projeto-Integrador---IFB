@@ -1,4 +1,3 @@
-"""Configuracoes do projeto (desafio COGMO, somente backend)."""
 import os
 from pathlib import Path
 
@@ -68,7 +67,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Contrato da API: rotas sem barra no final (ex: /api/stations)
+
 APPEND_SLASH = False
 
 REST_FRAMEWORK = {

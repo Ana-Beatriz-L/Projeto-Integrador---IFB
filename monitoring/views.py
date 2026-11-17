@@ -1,4 +1,3 @@
-"""Views (Pessoa 2). Finas: validam entrada, chamam services, montam a resposta."""
 from datetime import timezone
 from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework.response import Response
