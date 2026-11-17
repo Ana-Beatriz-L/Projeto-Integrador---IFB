@@ -88,6 +88,5 @@ SPECTACULAR_SETTINGS = {
     ),
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
+    "REDOC_DIST": "https://cdn.jsdelivr.net/npm/redoc@2.1.5",
 }
-
-CORS_ALLOW_ALL_ORIGINS = DEBUG
